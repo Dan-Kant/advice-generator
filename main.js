@@ -8,7 +8,7 @@ function getQuote() {
     return response.json();
 }).then(data => {
     const dataObj = data.slip;
-    quote.innerHTML = `${dataObj.advice}`;
+    quote.innerHTML = `"${dataObj.advice}"`;
     adviceNumber.innerHTML = `${dataObj.id}`;
 }).catch(error => {
     console.log(error);
